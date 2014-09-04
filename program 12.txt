@@ -1,4 +1,4 @@
-Module Module1
+דכשכנÿרהûעכגגאגאמנא
 
     Sub Main()
         Dim a, b As Integer
@@ -31,3 +31,7 @@ Module Module1
     End Sub
 
 End Module
+
+
+work
+ÔףפףאןÛÂÀÃÙÏØÄ4מנארשינארהניÄÀØÐÖמכה דרשצךאן
