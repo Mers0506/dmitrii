@@ -1,0 +1,36 @@
+// прога.cpp: определ€ет точку входа дл€ консольного приложени€.
+//
+
+#include "stdafx.h"
+#include "iostream"
+#include "locale.h"
+
+using namespace std;
+
+int main ()
+
+{
+	setlocale(LC_ALL,"russian");
+	int  a ,b , c ;
+	cout<<("wellcome")<<endl;
+	system ("pause");
+		cout<<("введите число => ") ;
+		cin>>a;
+		c = a%3;
+		b = a / 3;
+		 if (c==0 )
+		{
+			cout<<"число дел€тс€ нацело ,оно равно => " <<b<<endl ;
+		
+		
+	      
+
+		}
+		else
+		{
+			cout<<("число не дел€тс€ ")<<endl;
+			}
+		cout<<("нажмите на любую клавишу дл€ завершение")<<endl;
+		system ("pause");
+		return 0;
+}

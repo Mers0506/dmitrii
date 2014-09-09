@@ -1,0 +1,27 @@
+// прога 4.cpp: определяет точку входа для консольного приложения.
+//
+
+#include "stdafx.h"
+#include "iostream"
+#include "locale.h"
+
+using namespace std;
+
+int main ()
+
+{
+	setlocale(LC_ALL,"russian");
+	int a=0;  float x , summa =0;
+	cout<<"введите последовательность чисел . для завершения нажмите 0"<<endl;
+	do 
+	{
+		cin>>x;
+		if (x==0) break;
+		summa =summa + x;
+			a++ ;
+			cout<<"среднее арефмитическое введенной последовательности => "<<summa/a<<endl;
+	}
+	while (x!=0);
+
+
+	}

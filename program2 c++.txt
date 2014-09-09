@@ -1,0 +1,42 @@
+// прога 2.cpp: определяет точку входа для консольного приложения.
+//
+
+#include "stdafx.h"
+#include "iostream"
+#include "locale.h"
+
+using namespace std;
+
+int main ()
+
+{
+	setlocale(LC_ALL,"russian");
+	int  a ,b , c ;
+	cout<<("wellcome")<<endl;
+	system ("pause");
+		cout<<("введите день недели => ") ;
+		cin>>a;
+		 if (a>7 )
+		 { cout<<("в нидели только 7 дней")<<endl;}
+		 else if (a<1) {
+			 cout<<(" вы ввели меньше одного нельзя ")<<endl;}
+		 else if (a==1)
+		 {cout<<("нету ,  2")<<endl; }
+		 else if (a==2)
+		 { cout<<(" 1 , 2")<<endl;}
+		 else if (a==3)
+		 { cout<<(" 2 , 4")<<endl;}
+		 else if (a==4)
+		 { cout<<("3 , 5")<<endl; }
+		 else if (a==5)
+		 { cout<<(" 4 , 6")<<endl; }
+		 else if (a==6)
+		 { cout<<(" 5 ,7")<<endl;}
+		 else if (a==7)
+		 { cout<<(" 6 , нету ")<<endl ;}
+
+
+		cout<<("КОНЕЦ")<<endl;
+		system ("pause");
+		return 0;
+}
