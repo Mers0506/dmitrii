@@ -1,0 +1,32 @@
+
+#include "stdafx.h"
+#include "iostream"
+#include "locale.h"
+
+using namespace std;
+
+int main ()
+
+{
+	setlocale(LC_ALL,"russian");
+	int  a ,b , c ;
+	cout<<("wellcome")<<endl;
+	system ("pause");
+		cout<<("введите день недели => ") ;
+		cin>>a;
+		do
+		{ if (a>7 ) 
+		 { cout<<("в нидели только 7 дней")<<endl ;break ;}
+		 else if (a<1) 
+			{ cout<<(" вы ввели меньше одного нельзя ")<<endl; break ;}
+		 else if (a==1)
+		 {cout<<(" 7 ,  2")<<endl; break; }		
+		 else if (a==7)
+		 { cout<<(" 6 , 1 ")<<endl ;break ;} 
+		 b = a - 1;
+		 c = a + 1;
+		 cout<<b<<","<<c<<endl;break;}
+while ( c!=0,b!=0);
+		system ("pause");
+		return 0;
+}
