@@ -1,4 +1,4 @@
-// ConsoleApplication13.cpp: определяет точку входа для консольного приложения.
+// ConsoleApplication5.cpp: определяет точку входа для консольного приложения.
 //
 
 #include "stdafx.h"
