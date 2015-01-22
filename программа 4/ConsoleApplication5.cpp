@@ -1,6 +1,8 @@
-// ConsoleApplication5.cpp: определяет точку входа для консольного приложения.
+// ConsoleApplication13.cpp: определяет точку входа для консольного приложения.
 //
+
 #include "stdafx.h"
+
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -15,7 +17,7 @@ int main(void)
 		return -4;
 	}
 	in >> n >> m;
-	int** A = new int*[n + 2];
+	int** A = new int*[m + 2];
 	for (int i = 0; i < n + 2; i++)
 	{
 		A[i] = new int[m + 2];
@@ -24,7 +26,7 @@ int main(void)
 	{
 		for (int j = 0; j < n + 2; j++)
 		{
-			if (i != 0 && i != m + 2 && j != 0 && j != n + 2)
+			if (i != 0 && i != m + 1 && j != 0 && j != n + 1)
 			{
 				in >> A[i][j];
 			}
@@ -34,6 +36,7 @@ int main(void)
 			}
 		}
 	}
+
 	ofstream out("out.txt");
 	if (!out.is_open())
 	{
@@ -44,7 +47,7 @@ int main(void)
 	{
 		for (int j = 1; j < n + 1; j++)
 		{
-			out << A[i - 1][j - 1] + A[i - 1][j] + A[i - 1][j + 1] + A[i][j - 1] + A[i][j] + A[i][j + 1] + A[i + 1][j - 1] + A[i + 1][j] + A[i + 1][j + 1];
+			out << A[i - 1][j - 1] + A[i - 1][j] + A[i - 1][j + 1] + A[i][j - 1] + A[i][j] + A[i][j + 1] + A[i + 1][j - 1] + A[i + 1][j] + A[i + 1][j + 1] << ' ';
 		}
 		out << endl;
 	}
