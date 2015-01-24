@@ -11,11 +11,13 @@ int main(void)
 	setlocale(LC_ALL, "rus");
 	int n, m, max;
 	ifstream in("in.txt");
+	//проверка существует и фаил
 	if (!in.is_open())
 	{
 		cout << "Not open in.txt" << endl;
 		return -4;
 	}
+	//вывод из in матрицы и ее заполнение
 	in >> n >> m;
 	int** A = new int*[m + 2];
 	for (int i = 0; i < n + 2; i++)
@@ -36,12 +38,13 @@ int main(void)
 			}
 		}
 	}
-
+	//выходной поток в фаил
 	ofstream out("out.txt");
 	if (!out.is_open())
 	{
 		cout << "Not create out.txt" << endl;
 		return -4;
+		// перебор матрицы и выполнение алгоритма
 	}
 	for (int i = 1; i < m + 1; i++)
 	{
