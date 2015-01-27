@@ -15,7 +15,7 @@ int main(void)
 	//обьявление переменных
 	char let;
 	string slovo;
-	string pre;
+	string pre, r;
 	string pro, mid;
 	int n, d, a, m;
 	//открытие входного потока , и проверка на существование файла
@@ -37,6 +37,7 @@ int main(void)
 	n = 0;
 	d = 0;
 	m = 0;
+	r = ',';
 	//начало цикла
 	while (!in.eof())
 	{
@@ -45,11 +46,12 @@ int main(void)
 		a = a + 1;
 		n = n + 1;
 		// накопление в текущий буфер
-		pro = pro + let;
+		
 		mid = mid + let;
 		// проверка на окончания слова или предложения 
 		if (let == ' ' || let == '?' || let == '!' || let == '.' || let == ',')
 		{
+			pro = pro + r;
 			//проверка на самое длинное слово
 			if (d<n)
 			{
@@ -72,14 +74,23 @@ int main(void)
 			}
 
 			// проверка на самое длинное предложениия 
-			if (let == '?' || let == '!' || let == '.' && m < a)
+			if (let == '?' || let == '!' || let == '.')
 			{
-				pre = mid;
-				m = a;
-				mid.clear();
-				a = 0;
+				if (m < a)
+				{
+					pre = mid;
+					m = a;
+					mid.clear();
+					a = 0;
+				}
+				else {
+					mid.clear();
+					a = 0;
+				}
 			}
+
 		}
+		pro = pro + let;
 
 	}
 	// вывод самого длинного предложения и слова 
