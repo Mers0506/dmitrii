@@ -1,6 +1,9 @@
 #ifndef _FIELD_H
 #define _FIELD_H
 
+    // поля x, y, turn, masEvr  убрал из класса Field, 
+    //  и также убрал глобальные переменные i и j. 
+
 //Ячейка поля
 enum Cell
 {
@@ -32,10 +35,11 @@ public:
 	bool isWon(bool cross) const;
 	bool isOver() const;
 	int statWon();
-	int  bestTurn(); //Устанавливает ход компьютера
+	void bestTurn(); //Устанавливает ход компьютера
 	void initEvr();
-	int x, y;
-	int turn[2];
+// Перенесено в локальные для bestTurn	int x, y; 
+	int iT, jT; // Перенесли сюда!
+// Убрано!	int turn[2];
 	int masEvr[3][3];
 	// Доступ к ячейкам
 	// i номер колонки от 1 до 3
